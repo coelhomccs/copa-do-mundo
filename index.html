@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Mundo Masculina 2026</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        header, footer {
+            background-color: #004d99;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+            padding: 20px 0;
+        }
+        h2 {
+            color: #004d99;
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            background-color: #cccccc;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+        }
+        .tab.active {
+            background-color: #3399ff;
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+        .tab-content {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 0 8px 8px 8px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Copa do Mundo Masculina 2026</h1>
+    </header>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('tab1')">Sobre</div>
+            <div class="tab" onclick="showTab('tab2')">Estádios</div>
+            <div class="tab" onclick="showTab('tab3')">Equipes</div>
+        </div>
+        <div id="tab1" class="tab-content active">
+            <h2>Sobre a Copa do Mundo</h2>
+            <p>A Copa do Mundo Masculina de 2026 será realizada nos Estados Unidos, Canadá e México. Este evento esportivo de grande magnitude contará com a participação de seleções de futebol de todo o mundo, competindo pelo cobiçado título de campeão mundial. Prepare-se para acompanhar jogos emocionantes, torcer pelos seus times favoritos e vivenciar a magia do futebol.</p>
+            <img src="C:\Users\Iago\OneDrive\Área de Trabalho\Copa do Mundo\OIP.jpeg" alt="Troféu da Copa do Mundo">
+        </div>
+        <div id="tab2" class="tab-content">
+            <h2>Estádios</h2>
+            <p>Os jogos da Copa do Mundo de 2026 serão realizados em alguns dos estádios mais icônicos dos Estados Unidos, Canadá e México. Abaixo estão alguns dos principais locais onde as partidas ocorrerão:</p>
+            <h3>Estados Unidos</h3>
+            <ul>
+                <li>MetLife Stadium (East Rutherford)</li>
+                <li>Rose Bowl (Pasadena)</li>
+                <li>Mercedes-Benz Stadium (Atlanta)</li>
+            </ul>
+            <h3>Canadá</h3>
+            <ul>
+                <li>BC Place (Vancouver)</li>
+                <li>Commonwealth Stadium (Edmonton)</li>
+                <li>BMO Field (Toronto)</li>
+            </ul>
+            <h3>México</h3>
+            <ul>
+                <li>Estadio Azteca (Cidade do México)</li>
+                <li>Estadio BBVA (Monterrey)</li>
+                <li>Estadio Akron (Guadalajara)</li>
+            </ul>
+            <img src="C:\Users\Iago\OneDrive\Área de Trabalho\Copa do Mundo\mercedes-benz-stadium-atlanta-georgia-usa.webp" alt="Estádio da Copa do Mundo">
+        </div>
+        <div id="tab3" class="tab-content">
+            <h2>Equipes</h2>
+            <p>As melhores seleções de futebol de todo o mundo irão competir na Copa do Mundo de 2026. Abaixo estão algumas das equipes participantes:</p>
+            <ul>
+                <li>Brasil</li>
+                <li>Alemanha</li>
+                <li>Argentina</li>
+                <li>França</li>
+                <li>Itália</li>
+                <li>Espanha</li>
+                <li>Inglaterra</li>
+                <li>Portugal</li>
+                <li>Holanda</li>
+                <li>Bélgica</li>
+                <li>Uruguai</li>
+                <li>México</li>
+                <li>Japão</li>
+                <li>Coreia do Sul</li>
+                <li>Nigéria</li>
+                <li>Camarões</li>
+                <li>Estados Unidos</li>
+                <li>Canadá</li>
+            </ul>
+            <img src="C:\Users\Iago\OneDrive\Área de Trabalho\Copa do Mundo\OIP (1).jpeg" alt="Equipe de Futebol">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Copa do Mundo Masculina. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab');
+            var tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            
+            tabContents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+            
+            document.querySelector('.tab[onclick="showTab(\'' + tabId + '\')"]').classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
